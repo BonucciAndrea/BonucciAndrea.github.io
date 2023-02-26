@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<div class="back"></div>
+<nav>
+    <a href="index.html">Back</a>
+</nav>
+<html>
+<style>
+      h1 {text-align: center;}
+      p {text-align: center;}
+      div {text-align: center;}
+body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    </style>
+<h3>Contact Form</h3>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="form-container">
+		<form action="https://formspree.io/f/mbjeyrja" method="POST">
+
+			<div class="input-row">
+				<label style="padding-top: 20px;">Name</label> <span
+					id="userName-info" class="info"></span><br /> <input type="text"
+					class="input-field" name="userName" id="userName" />
+			</div>
+			<div class="input-row">
+				<label>Email</label> <span id="userEmail-info" class="info"></span><br />
+				<input type="text" class="input-field" name="userEmail"
+					id="userEmail" />
+			</div>
+			<div class="input-row">
+				<label>Subject</label> <span id="subject-info" class="info"></span><br />
+				<input type="text" class="input-field" name="subject" id="subject" />
+			</div>
+			<div class="input-row">
+				<label>Message</label> <span id="userMessage-info" class="info"></span><br />
+				<textarea name="content" id="content" class="input-field" cols="60"
+					rows="6"></textarea>
+			</div>
+			<div>
+				<input type="submit" name="send" class="btn-submit" value="Send" />
+</html>
