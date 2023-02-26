@@ -1,4 +1,5 @@
 /* Fonts */
+html{ zoom: 150%; }
 body { font-family: 'Roboto', sans-serif; } 
 h1, h2, h3 { font-family: 'Open Sans', sans-serif; } 
 /* Colors */ 
