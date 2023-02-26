@@ -57,7 +57,7 @@ nav a{
   margin: 15px;
   font-size:16px;
   letter-spacing:1px;
-  position:relative;
+  position:sticky;
   display:inline-block;
 }
 nav a:before{
