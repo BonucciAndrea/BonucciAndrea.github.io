@@ -12,6 +12,7 @@ body { background-color: #f5f5f5e6; }
 /* Animations */ 
 .math-formula { animation: fadeIn 2s ease-in 1s forwards; }
 
+
 .cut-image{
     position:relative;
     float:right;    
@@ -32,6 +33,29 @@ body { background-color: #f5f5f5e6; }
     border-top:40px solid transparent;
     border-bottom:40px solid transparent;
     border-right:40px solid transparent;
+}
+
+.section {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;;
+}
+
+.paragraph {
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  color: #222;
+  line-height: 24px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
@@ -113,4 +137,5 @@ nav a:hover:before{
     animation:show .2s #{$i*0.1+1}s ease 1 both;
   }
 }
+
 
