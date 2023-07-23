@@ -4,15 +4,217 @@
     <a href="index.html">Back</a>
 </nav>
 <html>
-    <style>
-        h1 {text-align: center;}
-        p {text-align: center;}
-        div {text-align: center;}
-     </style>
-<div class="blog">
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <h3>First blog entry!</h3>
-    <p>Hey everyone! I still haven't properly set up this blog :)</p>
+<head>
+    <link rel="stylesheet" href="style.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Proof of the Week #2</h2>
+      <a name="Week2"></a>
+      <h5>Representation theory, July 23, 2023</h5>
+      <div class="fakeimg" style="height:auto;">Let $p \in \mathbb{N}$ be a prime number and $\mathbb{F}_p$ the field with $p$ elements. Consider the group $\mathrm{G}=\mathrm{GL}_2\left(\mathbb{F}_p\right)$ and its subgroups
+        $$
+        \mathrm{B}:=\left\{\left(\begin{array}{ll}
+        a & b \\
+        0 & d
+        \end{array}\right) \mid a d \neq 0\right\} \subset \mathrm{G},
+        $$
+        and
+        $$
+        \mathrm{T}:=\left\{\left(\begin{array}{ll}
+        a & 0 \\
+        0 & d
+        \end{array}\right) \mid a d \neq 0\right\} \subset \mathrm{B} .
+        $$ Let $\widetilde{\left(\chi_1, \chi_2\right)}$ be the one-dimensional representation of $\mathrm{B}$ corresponding to the above character of $\mathrm{T}$ under the bijection $\varphi$ from the set of one-dimensional representations of $B$ to the set of irreducible characters of $T$ via the restriction of $\widehat{F_p^{\times}}$.
+        Then the representation $\operatorname{Ind}_{\mathrm{B}}^{\mathrm{G}}\left(\widetilde{\left(\chi_1, \chi_2\right)}\right)$ is irreducible if and only if $\left(\chi_1, \chi_2\right) \neq$ $\left(\chi_2, \chi_1\right)$.
+        </div>
+      <p><em>Proof:</em></p>
+      <p>We begin with the following assumption; say that $Ind_B^G\widetilde{(\chi_1,\chi_2)}$ is irreducible; then recall that by Mackey's irreducibility criterion, it is equivalent to the following two one-dimensional (thus irreducible) representations to be disjoint; namely,
+        \begin{equation*}
+            Res_{B\cap sBs^{-1}}^{B}\widetilde{(\chi_1,\chi_2)}  \ \text{and} \ Res^{sBs^{-1}}_{B\cap sBs^{-1}}\widetilde{(\chi_1,\chi_2)^s}. 
+        \end{equation*}
+        More precisely,
+        \begin{equation}
+            \langle Res_{B\cap sBs^{-1}}^{B}\widetilde{(\chi_1,\chi_2)}, Res^{sBs^{-1}}_{B\cap sBs^{-1}}\widetilde{(\chi_1,\chi_2)^s} \rangle = 0.
+        \end{equation}
+        Observe that $\mathcal{R} = \{1,s\}$ is a complete set of representatives of the double coset $B \backslash G/B$, where
+        \begin{equation*}
+            s =
+        \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+        \end{bmatrix}.
+        \end{equation*}
+        Thus, given any $b \in B$,
+        \begin{equation*}
+            sbs^{-1} = s
+            \begin{bmatrix}
+            x & y \\
+            0 & z
+            \end{bmatrix}
+            s^{-1} = 
+            \begin{bmatrix}
+            z & 0 \\
+            y & x
+            \end{bmatrix};
+        \end{equation*}
+        which is in $B$ $\iff$ $y = 0$; i.e.
+        \begin{equation*}
+            b = 
+            \begin{bmatrix}
+            x & 0 \\
+            0 & z
+            \end{bmatrix}
+            \in T.
+        \end{equation*}
+        Hence, $B \cap sBs^{-1} = T$. Moreover, let $\varphi$ be the bijection given. Then we may write $Res_{B\cap sBs^{-1}}^{B}\widetilde{(\chi_1,\chi_2)}(b) = Res_T^B \varphi((\chi_1,\chi_2))(b)$, and
+        \begin{align*}
+            Res^{sBs^{-1}}_{B\cap sBs^{-1}}\widetilde{(\chi_1,\chi_2)^s}(b) &= Res^{sBs^{-1}}_{T}\varphi((\chi_1,\chi_2))(s^{-1}bs); \\
+            &= Res^{sBs^{-1}}_{T} \varphi(\chi_2)(x) \varphi(\chi_1)(y) \\
+            &= Res^{sBs^{-1}}_{T}\varphi((\chi_2,\chi_1))(b).
+        \end{align*}
+        Here, it follows that in order for the two restrictions to be disjoint, they must not be equal; otherwise, since they would both be irreducible (and equal) their inner product would be 1. Thus; 
+        \begin{equation*}
+            Res_T^B \varphi((\chi_1,\chi_2)) \ne Res^{sBs^{-1}}_{T}\varphi((\chi_2,\chi_1)) \iff (\chi_1,\chi_2) \ne (\chi_2,\chi_1).
+        \end{equation*}
+        Hence we obtain that $Ind_B^G\widetilde{(\chi_1,\chi_2)}$ is not irreducible $\iff$ $(\chi_1,\chi_2) \ne (\chi_2,\chi_1)$.</p>
     </div>
+    <div class="card">
+
+      <h2>Proof of the Week #1</h2>
+      <a name="Week1"></a>
+      <h5>Homological algebra, July 16, 2023</h5>
+      <div class="fakeimg" style="height:auto;">Let $K$ be a field. Let $\mathcal{I}$ be the category with $\mathrm{ob} \mathcal{I}=\mathbb{N}$ and
+        $$
+        \operatorname{Hom}_{\mathcal{I}}(i, j)= \begin{cases}\{\star\} & j \leq i \\ \emptyset & j>i\end{cases}
+        $$
+        Consider the diagram
+        $$
+        R: \mathcal{I} \rightarrow \mathbf { CRing },  i \mapsto R_i:=K[X] /\left(X^i\right),
+        $$
+        (where for $j \leq i$ the map $K[X] /\left(X^i\right) \rightarrow K[X] /\left(X^j\right)$ is the quotient map). Then $\lim _{\mathcal{I}} R_i$ exists in $\mathbf{CRing}$, and it is isomorphic to the power series ring $K[[X]]$.</div>
+      <p><em>Proof:</em></p>
+      <p>We want to show that there exists isomorphisms \begin{equation*}\operatorname{Hom}_{\mathbf{CRing}}(-,K[[X]]) \underset{\eta}{\overset{\sim}{\longrightarrow}} lim_{\mathcal{I}}\operatorname{Hom}_{\mathbf{CRing}}(-, K[X]/(X^i)).\end{equation*}  
+        Where, we recall that $lim_{\mathcal{I}}\operatorname{Hom}_{\mathbf{CRing}}(T, K[X]/(X^i))$ is precisely the set
+\begin{equation*}
+     \{ (t_i: T \rightarrow K[X]/(X^i))_i | \forall \varphi: i \to j, X(\varphi)\circ t_i = t_j\}.
+\end{equation*}Consider the map
+\begin{align*}
+    \left( f : T \rightarrow K[[X]]\right) \mapsto (f_1,f_2,\dots);
+\end{align*}
+where $f$ is defined by $a \mapsto \sum_{i=0}^{\infty}b_iX^i$; and $f_j$ is defined by $a \mapsto \sum_{i = 0}^{j-1}X^{\overline{i}}$. Next, let $\star : i \to j$ ($j \leq i)$ then $X(\star): K[X]/(X^i) \to K[X]/(X^j)$ is given by $\sum_{k=0}^{i-1}b_kX^k \mapsto \sum_{k=0}^{j-1}\tilde{b}_kX^k$. Then, observe that 
+\begin{equation*}
+    X(\star) \circ t_i(a) = X(\star)\left(\sum_{k=0}^{i-1}b_kX^k\right) = \sum_{k=0}^{j-1}\tilde{b}_kX^k = t_j(a);
+\end{equation*}
+thus the map $\eta$ is well-defined. Next, it is easy to see that it is a homomorphism; and moreover, as given any $f:T \to K[[X]]$, $(f_1,f_2,\dots)$ always exists as $1,X,X^2,\dots$ forms a basis for $K[[X]]$ and $(K[X]/(X^0),K[X]/(X^1),\dots)$. Therefore, $\eta$ is injective. Finally, for $(f_1,f_2,\dots)$ in $lim_{\mathcal{I}}\operatorname{Hom}_{\mathbf{CRing}}(T, K[X]/(X^i))$, we can create an infinite sequence $(a_1,a_2,\dots)$, and a morphism $\psi:T \to K[[X]]$ such that $\eta(\psi) = (f_1,f_2,\dots)$. Hence, $\eta$ is a bijective homomorphism; in other words $lim_{\mathcal{I}}R_i$ exists and is isomorphic to $K[[X]]$.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+
+      <h2>About This Blog</h2>
+      <div class="fakeimg" style="height:auto;">Welcome to my math blog! Here, we'll take a closer look at the fascinating world of mathematics, sharing interesting facts and intriguing proofs each week. Let's embark on this learning journey together and discover the beauty of math!</div>
+    </div>
+    <div class="card">
+
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><a href="#Week1">Week 1</a></div><br>
+      <div class="fakeimg"><a href="#Week2">Week 2</a></div><br>
+    </div>
+    <div class="card">
+        
+      <h3>Follow Me</h3>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <p><a href="https://www.linkedin.com/in/andrea-bonucci-152463215/"> <a href="https://www.linkedin.com/in/andrea-bonucci-152463215/" class="fa fa-linkedin"></a></a><a href="https://github.com/BonucciAndrea"> <a href="https://github.com/BonucciAndrea" class="fa fa-github"></a></a><a href="https://github.com/BonucciAndrea"> <a href="https://twitter.com/MutatedCluster" class="fa fa-twitter"></a></a></p>
+    </div>
+  </div>
 </div>
+
+<div class="footer">
+  <h2></h2>
+</div>
+
+</body>
 </html>
