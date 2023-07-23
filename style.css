@@ -10,7 +10,7 @@ body { background-color: #f5f5f5e6; }
 
 img{
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 .cut-image{
     position:relative;

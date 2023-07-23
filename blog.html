@@ -32,13 +32,13 @@ body {
 /* Left column */
 .leftcolumn {   
   float: left;
-  width: 75%;
+  width: 80%;
 }
 
 /* Right column */
 .rightcolumn {
   float: left;
-  width: 25%;
+  width: 20%;
   padding-left: 20px;
 }
 
@@ -89,7 +89,7 @@ body {
       <h2>Proof of the Week #2</h2>
       <a name="Week2"></a>
       <h5>Representation theory, July 23, 2023</h5>
-      <div class="fakeimg" style="height:auto;">Let $p \in \mathbb{N}$ be a prime number and $\mathbb{F}_p$ the field with $p$ elements. Consider the group $\mathrm{G}=\mathrm{GL}_2\left(\mathbb{F}_p\right)$ and its subgroups
+      <div class="fakeimg" style="height:auto;"><p style = "font-size: 12px;">Let $p \in \mathbb{N}$ be a prime number and $\mathbb{F}_p$ the field with $p$ elements. Consider the group $\mathrm{G}=\mathrm{GL}_2\left(\mathbb{F}_p\right)$ and its subgroups
         $$
         \mathrm{B}:=\left\{\left(\begin{array}{ll}
         a & b \\
@@ -104,9 +104,9 @@ body {
         \end{array}\right) \mid a d \neq 0\right\} \subset \mathrm{B} .
         $$ Let $\widetilde{\left(\chi_1, \chi_2\right)}$ be the one-dimensional representation of $\mathrm{B}$ corresponding to the above character of $\mathrm{T}$ under the bijection $\varphi$ from the set of one-dimensional representations of $B$ to the set of irreducible characters of $T$ via the restriction of $\widehat{F_p^{\times}}$.
         Then the representation $\operatorname{Ind}_{\mathrm{B}}^{\mathrm{G}}\left(\widetilde{\left(\chi_1, \chi_2\right)}\right)$ is irreducible if and only if $\left(\chi_1, \chi_2\right) \neq$ $\left(\chi_2, \chi_1\right)$.
-        </div>
+    </p></div>
       <p><em>Proof:</em></p>
-      <p>We begin with the following assumption; say that $Ind_B^G\widetilde{(\chi_1,\chi_2)}$ is irreducible; then recall that by Mackey's irreducibility criterion, it is equivalent to the following two one-dimensional (thus irreducible) representations to be disjoint; namely,
+      <p style="font-size: 10px">We begin with the following assumption; say that $Ind_B^G\widetilde{(\chi_1,\chi_2)}$ is irreducible; then recall that by Mackey's irreducibility criterion, it is equivalent to the following two one-dimensional (thus irreducible) representations to be disjoint; namely,
         \begin{equation*}
             Res_{B\cap sBs^{-1}}^{B}\widetilde{(\chi_1,\chi_2)}  \ \text{and} \ Res^{sBs^{-1}}_{B\cap sBs^{-1}}\widetilde{(\chi_1,\chi_2)^s}. 
         \end{equation*}
@@ -161,7 +161,7 @@ body {
       <h2>Proof of the Week #1</h2>
       <a name="Week1"></a>
       <h5>Homological algebra, July 16, 2023</h5>
-      <div class="fakeimg" style="height:auto;">Let $K$ be a field. Let $\mathcal{I}$ be the category with $\mathrm{ob} \mathcal{I}=\mathbb{N}$ and
+      <div class="fakeimg" style="height:auto,"><p style = "font-size: 12px;"> $K$ be a field. Let $\mathcal{I}$ be the category with $\mathrm{ob} \mathcal{I}=\mathbb{N}$ and
         $$
         \operatorname{Hom}_{\mathcal{I}}(i, j)= \begin{cases}\{\star\} & j \leq i \\ \emptyset & j>i\end{cases}
         $$
@@ -169,9 +169,9 @@ body {
         $$
         R: \mathcal{I} \rightarrow \mathbf { CRing },  i \mapsto R_i:=K[X] /\left(X^i\right),
         $$
-        (where for $j \leq i$ the map $K[X] /\left(X^i\right) \rightarrow K[X] /\left(X^j\right)$ is the quotient map). Then $\lim _{\mathcal{I}} R_i$ exists in $\mathbf{CRing}$, and it is isomorphic to the power series ring $K[[X]]$.</div>
+        (where for $j \leq i$ the map $K[X] /\left(X^i\right) \rightarrow K[X] /\left(X^j\right)$ is the quotient map). Then $\lim _{\mathcal{I}} R_i$ exists in $\mathbf{CRing}$, and it is isomorphic to the power series ring $K[[X]]$.</p></div>
       <p><em>Proof:</em></p>
-      <p>We want to show that there exists isomorphisms \begin{equation*}\operatorname{Hom}_{\mathbf{CRing}}(-,K[[X]]) \underset{\eta}{\overset{\sim}{\longrightarrow}} lim_{\mathcal{I}}\operatorname{Hom}_{\mathbf{CRing}}(-, K[X]/(X^i)).\end{equation*}  
+      <p style="font-size: 10px">We want to show that there exists isomorphisms \begin{equation*}\operatorname{Hom}_{\mathbf{CRing}}(-,K[[X]]) \underset{\eta}{\overset{\sim}{\longrightarrow}} lim_{\mathcal{I}}\operatorname{Hom}_{\mathbf{CRing}}(-, K[X]/(X^i)).\end{equation*}  
         Where, we recall that $lim_{\mathcal{I}}\operatorname{Hom}_{\mathbf{CRing}}(T, K[X]/(X^i))$ is precisely the set
 \begin{equation*}
      \{ (t_i: T \rightarrow K[X]/(X^i))_i | \forall \varphi: i \to j, X(\varphi)\circ t_i = t_j\}.
