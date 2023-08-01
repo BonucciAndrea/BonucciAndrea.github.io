@@ -55,7 +55,7 @@ img{
 
        .thx{      position : fixed ;      left : 50% ;      transform : translateX(-50%) ;      bottom : 15px ;       }     
        
-       nav {      width : 100% ;      position : fixed ;      top : 50px ;      text-align : left ;       }       
+       nav {      width : 100% ;      position : absolute ;      top : 50px ;      text-align : left ;       }       
        
        nav a {      font-family : 'Oswald' , sans-serif ;      font-weight : 500 ;   z-index: 1030;   text-transform : uppercase ;      text-decoration : none ;      color : #16151b ;      margin : 15px ;      font-size : 16px ;      letter-spacing: 3px;     position: sticky;     display: inline-block;    }    
        
